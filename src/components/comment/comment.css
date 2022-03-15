@@ -1,0 +1,49 @@
+.commentContainer {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.thread {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.threadBar {
+  height: 100%;
+  width: 2px;
+
+  background-color: hsl(223, 19%, 93%);
+
+  margin-right: 2rem;
+}
+
+.repliesContainer {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+
+  width: 90%;
+}
+
+@media screen and (max-width: 560px) {
+  .thread {
+    justify-content: space-between;
+  }
+
+  .threadBar {
+    margin-right: 0;
+  }
+
+  .repliesContainer {
+    width: 95%;
+  }
+}

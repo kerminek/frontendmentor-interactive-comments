@@ -1,0 +1,354 @@
+.mainComment {
+  min-height: 6rem;
+  width: 100%;
+
+  background-color: white;
+
+  border-radius: 0.6rem;
+
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  position: relative;
+}
+
+.scoreHolder {
+  height: 100%;
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: column;
+
+  background-color: hsl(223, 19%, 93%);
+
+  height: 6rem;
+  width: 2.5rem;
+
+  border-radius: 0.6rem;
+
+  color: hsl(238, 40%, 52%);
+
+  padding: 0.8rem 0;
+}
+
+.scoreContainer > svg {
+  cursor: pointer;
+}
+
+.scoreContainer > svg:hover > path {
+  fill: hsl(238, 40%, 52%);
+}
+
+.clickedScore > path {
+  fill: hsl(238, 40%, 52%);
+}
+
+.rest {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  width: 100%;
+  height: 100%;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infoLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.infoLeft > img {
+  height: 1.7rem;
+}
+
+.you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.12rem 0.5rem;
+
+  background-color: hsl(238, 40%, 52%);
+
+  font-size: 13px;
+
+  border-radius: 0.25rem;
+
+  color: white;
+}
+
+.date {
+  color: hsl(211, 10%, 45%);
+  white-space: nowrap;
+}
+
+.testContainer {
+  position: absolute;
+
+  right: 1rem;
+  top: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.replyButtonContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 0.4rem;
+
+  cursor: pointer;
+}
+
+.replyButtonContainer > p {
+  color: hsl(238, 40%, 52%);
+
+  font-weight: 500;
+}
+
+.replyButtonContainer:hover > p,
+.replyButtonContainer:hover > svg > path {
+  color: hsl(239, 57%, 85%);
+  fill: hsl(239, 57%, 85%);
+}
+
+.myCommentContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.myDeleteButton,
+.myEditButton {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-weight: 500;
+}
+
+.myDeleteButton {
+  color: hsl(358, 79%, 66%);
+}
+
+.myDeleteButton:hover > svg > path,
+.myDeleteButton:hover {
+  color: hsl(357, 100%, 86%);
+  fill: hsl(357, 100%, 86%);
+}
+
+.myEditButton {
+  color: hsl(238, 40%, 52%);
+}
+
+.myEditButton:hover > svg > path,
+.myEditButton:hover {
+  color: hsl(239, 57%, 85%);
+  fill: hsl(239, 57%, 85%);
+}
+
+.textContainer {
+  color: hsl(211, 10%, 45%);
+
+  line-height: 22px;
+
+  height: 100%;
+  width: 100%;
+
+  word-break: break-word;
+}
+
+.usernameCall {
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+}
+
+.updateContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 1rem;
+}
+
+.artificialTextareaContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.artificialTextareaContainer > p {
+  width: 100%;
+}
+
+.updateContainer > button {
+  background-color: hsl(238, 40%, 52%);
+  border-radius: 0.6rem;
+  border: none;
+
+  color: white;
+
+  height: 2.5rem;
+  width: 6rem;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  order: 2;
+}
+
+.updateContainer > button:hover {
+  background-color: hsl(239, 57%, 85%);
+}
+
+/*  */
+
+.deleteQueryContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 1rem;
+
+  z-index: 99;
+}
+
+.deleteQueryBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: hsla(0, 0%, 0%, 0.473);
+  z-index: 1;
+}
+
+.deleteQuery {
+  background-color: white;
+
+  width: 25rem;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  border-radius: 0.5rem;
+
+  z-index: 99;
+}
+
+.deleteQuery > h2 {
+  font-weight: 500;
+
+  color: hsl(212, 24%, 26%);
+}
+
+.deleteQuery > p {
+  color: hsl(211, 10%, 45%);
+
+  width: 95%;
+
+  line-height: 21px;
+}
+
+.deleteQueryButtons {
+  display: flex;
+  gap: 0.7rem;
+
+  width: 100%;
+}
+
+.deleteQueryButtons > button {
+  flex: 1;
+
+  border: none;
+
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+
+  padding: 0.7rem;
+
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.deleteButtonNo {
+  background-color: hsl(211, 10%, 45%);
+}
+
+.deleteButtonYes {
+  background-color: hsl(358, 79%, 66%);
+}
+
+@media screen and (max-width: 560px) {
+  .mainComment {
+    flex-direction: column;
+  }
+
+  .scoreHolder {
+    order: 2;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .scoreContainer {
+    flex-direction: row;
+
+    width: 6rem;
+    height: 2.5rem;
+
+    padding: 0 0.8rem;
+  }
+
+  .infoContainer {
+  }
+
+  .testContainer {
+    top: unset;
+    bottom: 1.8rem;
+  }
+}

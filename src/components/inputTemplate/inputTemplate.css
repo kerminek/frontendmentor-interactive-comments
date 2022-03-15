@@ -1,0 +1,97 @@
+.inputTemplate {
+  min-height: 6rem;
+  width: 100%;
+  height: max-content;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  padding: 1rem;
+
+  background-color: white;
+
+  border-radius: 0.6rem;
+
+  gap: 1rem;
+}
+
+.inputTemplate > img {
+  height: 2rem;
+  width: 2rem;
+
+  margin-top: 0.2rem;
+}
+.textarea {
+  word-break: break-all;
+
+  display: block;
+  overflow: hidden;
+
+  border: hsl(238, 40%, 52%) 2px solid;
+  border-radius: 0.6rem;
+
+  height: 100%;
+
+  resize: none;
+
+  padding: 0.7rem;
+
+  font-size: 16px;
+
+  background-color: white;
+
+  cursor: pointer;
+
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.textareaPlaceholder[contenteditable]:empty::before {
+  content: "Add a comment...";
+  color: hsl(211, 10%, 45%);
+}
+
+.inputTemplate > button {
+  background-color: hsl(238, 40%, 52%);
+  border-radius: 0.6rem;
+  border: none;
+
+  color: white;
+
+  height: 2.5rem;
+  width: 6rem;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.inputTemplate > button:hover {
+  background-color: hsl(239, 57%, 85%);
+}
+
+@media screen and (max-width: 560px) {
+  .inputTemplate {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+
+  .artificialTextareaContainer {
+    width: 100%;
+    height: max-content;
+
+    order: 1;
+  }
+
+  .inputTemplate > img {
+    order: 2;
+  }
+
+  .inputTemplate > button {
+    order: 3;
+  }
+}
