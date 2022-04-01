@@ -13,7 +13,7 @@ const InputTemplate = ({ inputType, replyTo, threadId, setShowReply }) => {
     send: "SEND",
     update: "UPDATE",
   };
-  const [inputVal, setInputVal] = useState();
+  const [inputVal, setInputVal] = useState("");
   const inputRef = useRef();
 
   useEffect(() => {
@@ -59,14 +59,6 @@ const InputTemplate = ({ inputType, replyTo, threadId, setShowReply }) => {
   return (
     <div className="inputTemplate">
       <img src={currentUser.image.png} alt="" />
-      {/* <textarea
-        name=""
-        id=""
-        placeholder={inputType === "send" ? "Add a comment..." : undefined}
-        value={inputVal}
-        onChange={(x) => setInputVal(x.currentTarget.value)}
-        ref={inputRef}
-      /> */}
       <div className="artificialTextareaContainer">
         <span
           className="textarea textareaPlaceholder"
@@ -76,9 +68,7 @@ const InputTemplate = ({ inputType, replyTo, threadId, setShowReply }) => {
           onInput={(x) => {
             setInputVal(x.target.innerText);
           }}
-        >
-          {/* {inputVal} */}
-        </span>
+        ></span>
       </div>
       <button onClick={() => handleSend()}>{inputTypes[inputType]}</button>
     </div>

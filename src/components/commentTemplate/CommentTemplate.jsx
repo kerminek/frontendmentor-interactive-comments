@@ -26,12 +26,13 @@ const CommentTemplate = ({ data }) => {
   useEffect(() => {
     if (openEdit) {
       textareaRef.current.focus();
-      const range = new Range();
-      range.setStart(textareaRef.current.firstChild, editContent.length);
-      range.setEnd(textareaRef.current.firstChild, editContent.length);
-      window.getSelection().removeAllRanges();
-      document.getSelection().addRange(range);
-      console.log(range);
+      if (editContent.length > 0) {
+        const range = new Range();
+        range.setStart(textareaRef.current.firstChild, editContent.length);
+        range.setEnd(textareaRef.current.firstChild, editContent.length);
+        window.getSelection().removeAllRanges();
+        document.getSelection().addRange(range);
+      }
     }
   }, [openEdit]);
 
